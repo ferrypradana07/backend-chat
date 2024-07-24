@@ -15,8 +15,6 @@ app.use(cors({
   allowedHeaders : ['Content-Type']
 }))
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extends : true}))
 
 const IO = socketIo(server, {
   cors : {
