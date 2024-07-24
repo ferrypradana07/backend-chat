@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link href="Font/Poppins-SemiBold.ttf" type="stylesheet" />
+    </head>
+    <body id="main-web-container">
+        <div class="main-web">
+            <header>
+                <span>Chatter</span>
+                <input type="text" placeholder="Search">
+                <style>
+                    header input{
+                        border: none;
+                        background-color: white;
+                        margin-left: 1rem;
+                        border-radius: 9px;
+                        outline: none;
+                        padding: 10px;
+                        width: 70px;
+                        position: absolute;
+                        right: 70px;
+                        z-index: 7;
+                    }
+                    header span{
+                        color: aliceblue;
+                        font-size: 2rem;
+                        font-weight: bolder;
+                        margin-left: 20px;
+                        z-index: 7;
+                    }
+                </style>
+                <div class="menu">
+                    <div class="poin"></div>
+                    <div class="poin"></div>
+                    <div class="poin"></div>
+                </div>
+                <style>
+                    .menu{
+                        width: 20px;
+                        height: 40px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        gap: 3px;
+                        align-items: center;
+                        right: 20px;
+                        position: absolute;
+                        cursor: pointer;
+                    }
+                    .poin{
+                        width: 7px;
+                        height: 7px;
+                        background-color: rgb(255, 255, 255);
+                        border-radius: 100px;
+                    }
+                </style>
+            </header>
+            <div class="list-user-container">
+                <div class="user-container" onclick="window.location.href ='index.html'" >
+                    <div class="user-image">
+                        <img src="../assets/pp.jpg" alt="">
+                    </div>
+                    <div class="user-detail">
+                        <div class="username">Felix</div>
+                        <div class="last-message">Bang</div>
+                    </div>
+                    <div class="message-status" style="padding: 15px 15px 0 0;">
+                        <span>12/12/2024</span>
+                    </div>
+                    <style>
+                        
+                    </style>
+                </div>
+                <div class="user-container" onclick="window.location.href ='index.html'" >
+                    <div class="user-image">
+                        <img src="../assets/pp.jpg" alt="">
+                    </div>
+                    <div class="user-detail">
+                        <div class="username">Felix</div>
+                        <div class="last-message">Bang</div>
+                    </div>
+                    <div class="message-status" style="padding: 15px 15px 0 0;">
+                        <span>12/12/2024</span>
+                    </div>
+                    <style>
+                        
+                    </style>
+                </div>
+                <div class="user-container" onclick="window.location.href ='index.html'" >
+                    <div class="user-image">
+                        <img src="../assets/pp.jpg" alt="">
+                    </div>
+                    <div class="user-detail">
+                        <div class="username">Felix</div>
+                        <div class="last-message">Bang</div>
+                    </div>
+                    <div class="message-status" style="padding: 15px 15px 0 0;">
+                        <span>12/12/2024</span>
+                    </div>
+                    <style>
+                        
+                    </style>
+                </div>
+                <div class="user-container" onclick="window.location.href ='index.html'" >
+                    <div class="user-image">
+                        <img src="../assets/pp.jpg" alt="">
+                    </div>
+                    <div class="user-detail">
+                        <div class="username">Felix Hikari</div>
+                        <div class="last-message">Bang</div>
+                    </div>
+                    <div class="message-status" style="padding: 15px 15px 0 0;">
+                        <span>12/12/2024</span>
+                    </div>
+                    <style>
+                        
+                    </style>
+                </div>
+                <a href="daftar.html">aa</a>
+            </div>
+           
+            <script defer src="/script.js"></script>
+            <script defer src="/socket.io/socket.io.js"></script>
+            <!-- <script src="https://localhost:7575/socket.io/socket.io.js"></script> -->
+            <!-- <script src="http://friendly-woolen-muse/socket.io/socket.io.js"></script> -->
+            <style>
+                :root {
+                    --border-size: 0.2vw;
+                    --border-color: rgba(180, 178, 178, 0.7);
+                }
+                html{
+                    font-size: 12px;
+                }
+                body {
+                    /* min-width: calc(760px + 2vw); */
+                    /* max-width: 100vw; */
+                    display: flex;
+                    justify-content: center;
+                    font-family: "Poppins";
+                    margin: 0vw;
+                    padding: 0vw;
+                }
+
+                .main-web {
+                    z-index: 5;
+                    min-width: 760px;
+                    max-width: 760px;
+                    margin: 0vw;
+                    padding: 0vw;
+                    min-height: 100vh;
+                    max-height: fit-content;
+                    border: 0.2vw solid var(--border-color);
+                    /* border-radius: 20px; */
+                    position: relative;
+                }
+
+                @media screen and (max-width : 765px) {
+                    .main-web, body{
+                        width: 100vw;
+                    }
+                }
+                header {
+                    height: 90px;
+                    display: flex;
+                    background-color: rgba(22, 138, 173, 0.8);
+                    align-items: center;
+                    position: sticky;
+                    top: 0;
+                    z-index: 7;
+                }
+                .user-container{
+                    padding: 15px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                    background-color: white;
+                    display: grid;
+                    grid-template-columns: 70px 1fr 80px;
+                }
+                .user-container:hover{
+                    transition: background-color 0.5s ease-in, transform 0.8s ease-in-out;
+                    background-color: var(--border-color);
+                    transform: scale(1.15);
+                    z-index: 9;
+                    /* transform:rotate(360deg); */
+                }
+                .user-image{
+                    grid-column: 1/2;
+                }
+                .user-image img{
+                    width: 70px;
+                    height: 70px;
+                    object-fit: cover;
+                    clip-path: circle(50%);
+                }
+                .user-detail{
+                    grid-column: 2/3;
+                    display: grid;
+                    padding: 5px;
+                    padding-left: 20px;
+                    box-sizing: border-box;
+                }
+                .username{
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                    height: 70%;
+                }
+                .last-message{
+                    height: 30%;
+                    font-size: 1.3rem;
+                }
+            </style>
+             <!-- <script>
+                // const body = document.getElementsByTagName('div')[0]
+                // alert("px "+ body.style.width + "px")
+            </script> -->
+            <footer>
+
+            </footer>
+        </div>
+    </body>
+</html>

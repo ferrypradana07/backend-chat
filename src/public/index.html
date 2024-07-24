@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Message</title>
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet"
@@ -12,12 +12,41 @@
     </head>
     <body id="main-web-container">
         <div class="main-web">
-            <header></header>
+            <header>
+                <img id="back" src="../assets/back.png" alt="" onclick="window.location.href = 'home.html'">
+                <img src="../assets/pp.jpg" alt="" style="cursor: pointer;;object-fit: cover;width: 60px;height: 60px;clip-path: circle(50%);margin-left: 2rem;">  
+                <span style="color:  white; font-size: 1.5rem;margin-left: 1rem;">Ferry Pradana</span>
+                <div class="menu">
+                    <div class="poin"></div>
+                    <div class="poin"></div>
+                    <div class="poin"></div>
+                </div>
+                <style>
+                    .menu{
+                        width: 20px;
+                        height: 40px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        gap: 3px;
+                        align-items: center;
+                        right: 20px;
+                        position: absolute;
+                        cursor: pointer;
+                    }
+                    .poin{
+                        width: 7px;
+                        height: 7px;
+                        background-color: rgb(255, 255, 255);
+                        border-radius: 100px;
+                    }
+                </style>
+            </header>
             <main>
                 <div class="user-detail">
                     <div class="user-image">
                         <!-- <img src="../assets/pp.jpg" alt="" /> -->
-                        <img src="../pp.jpg" alt="" />
+                        <img src="../assets/pp.jpg" alt="" />
                     </div>
                     <div class="username">
                         <b>Ferry Pradana</b>
@@ -32,7 +61,7 @@
                         <div class="message-area-right">
                             <div class="message-box">
                                 <pre class="message">
-hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohallohallohallohallohallohallo hallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallo</pre
+                                    hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohallohallohallohallohallohallo hallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallo</pre
                                 >
                                 <span class="message-time">12:33</span>
                             </div>
@@ -40,33 +69,7 @@ hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohalloh
                         <div class="message-area-right">
                             <div class="message-box">
                                 <pre class="message">
-hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohallohallohallohallohallohallo hallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallo</pre
-                                >
-                                <span class="message-time">12:33</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="message-cluster">
-                        <div class="message-area-left">
-                            <div class="message-box">
-                                <pre class="message">
-hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohallohallohallohallohallohallo hallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallo</pre
-                                >
-                                <span class="message-time">12:33</span>
-                            </div>
-                        </div>
-                        <div class="message-area-left">
-                            <div class="message-box">
-                                <pre class="message">
-hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohallohallohallohallohallohallo hallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallo</pre
-                                >
-                                <span class="message-time">12:33</span>
-                            </div>
-                        </div>
-                        <div class="message-area-left">
-                            <div class="message-box">
-                                <pre class="message">
-hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohallohallohallohallohallohallo hallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallo</pre
+                                    hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohallohallohallohallohallohallo hallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallohallo</pre
                                 >
                                 <span class="message-time">12:33</span>
                             </div>
@@ -83,6 +86,7 @@ hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohalloh
                     <button id="send_message">Kirim</button>
                 </div>
             </main>
+           
             <script defer src="/script.js"></script>
             <script defer src="/socket.io/socket.io.js"></script>
             <!-- <script src="https://localhost:7575/socket.io/socket.io.js"></script> -->
@@ -90,30 +94,33 @@ hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohalloh
             <style>
                 :root {
                     --border-size: 0.2vw;
-                    --border-color: rgba(180, 178, 178, 0.9);
+                    --border-color: rgba(180, 178, 178, 0.7);
+                }
+                html{
+                    font-size: 12px;
                 }
                 body {
-                    min-width: calc(760px + 2vw);
+                    /* min-width: calc(760px + 2vw); */
                     /* max-width: 100vw; */
                     display: flex;
                     justify-content: center;
                     font-family: "Poppins";
-                    font-size: 12px;
                     margin: 0vw;
                     padding: 0vw;
                 }
 
                 .main-web {
                     z-index: 5;
-                    width: 760px;
+                    max-width: 760px;
                     margin: 0vw;
                     padding: 0vw;
-                    min-height: 120vh;
+                    min-height: 100vh;
                     max-height: fit-content;
-                    border: 0.2vw solid rgb(180, 178, 178);
+                    border: 0.2vw solid var(--border-color);
                     /* border-radius: 20px; */
                     position: relative;
                 }
+
                 @media screen and (max-width : 765px) {
                     .main-web, body{
                         width: 100vw;
@@ -121,7 +128,19 @@ hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohalloh
                 }
                 header {
                     height: 90px;
-                    border-bottom: 0.2vw solid rgb(180, 178, 178);
+                    display: flex;
+                    background-color: rgba(22, 138, 173, 0.8);
+                    align-items: center;
+                    position: sticky;
+                    top: 0;
+                    z-index: 7;
+                }
+                
+                #back{
+                    cursor: pointer;
+                    margin-left: 20px;
+                    width: 30px;
+                    height: 30px;
                 }
                 .user-detail {
                     height: 100%;
@@ -138,8 +157,15 @@ hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohalloh
                     height: 100px;
                     clip-path: circle(50%);
                     object-fit: cover;
+                    border: 0 solid white;
+                    background-color: white;
+                }
+                .user-image {
+                    border-radius: 900px;
+
                 }
                 .username {
+                    /* font-size: 1.1rem; */
                     font-size: 1.1rem;
                 }
                 .user-status {
@@ -154,11 +180,11 @@ hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohalloh
                 }
                 .message-date .date {
                     padding: 5px;
-                    background-color: aqua;
+                    background-color: rgb(238, 248, 248);
                     border-radius: 8px;
                 }
                 .message-container {
-                    height: 100%;
+                    height: 60vh;
                     width: 100%;
                 }
                 .message-cluster {
@@ -241,6 +267,7 @@ hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohalloh
                     text-align: center;
                     margin-left: 4px;
                     background-color: rgb(255, 255, 255);
+                    border: 0.2vw solid var(--border-color);
                     color: inherit;
                 }
                 .input-container button:hover{
@@ -249,6 +276,10 @@ hallohallohallohallohallohallohallohallosssssssssssss hallohallohallohallohalloh
                     color: white;
                 }
             </style>
+             <!-- <script>
+                const body = document.getElementsByTagName('div')[0]
+                alert("px "+ body.style.width + "px")
+            </script> -->
             <footer></footer>
         </div>
     </body>
