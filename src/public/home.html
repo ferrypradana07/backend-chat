@@ -36,10 +36,30 @@
                         z-index: 7;
                     }
                 </style>
-                <div class="menu">
-                    <div class="poin"></div>
-                    <div class="poin"></div>
-                    <div class="poin"></div>
+                <div class="menu-container">
+                    <div class="menu" onclick="show()">
+                        <div class="poin"></div>
+                        <div class="poin"></div>
+                        <div class="poin"></div>
+                    </div>
+                    <style>
+                        .dropdown-container{
+                            display: block;
+                            position: absolute;
+                            background-color: aqua;
+                        }
+                        </style>
+                    <div class="dropdown-container">
+                        <span>Profile</span>
+                        <span>Pengaturan</span>
+                    </div>
+                        <script>
+                            const dropdown = document.getElementsByClassName('dropdown-container')[0]
+                            function show(){
+                                const display = dropdown.style.display
+                                dropdown.style.display = display == 'none'? 'flex' : 'none' ;
+                            }
+                        </script>
                 </div>
                 <style>
                     .menu{
@@ -151,7 +171,7 @@
                 .main-web {
                     z-index: 5;
                     min-width: 760px;
-                    max-width: 760px;
+                    /* max-width: 760px; */
                     margin: 0vw;
                     padding: 0vw;
                     min-height: 100vh;
@@ -171,7 +191,7 @@
                     display: flex;
                     background-color: rgba(22, 138, 173, 0.8);
                     align-items: center;
-                    position: sticky;
+                    /* position: sticky; */
                     top: 0;
                     z-index: 7;
                 }
@@ -185,9 +205,8 @@
                     grid-template-columns: 70px 1fr 80px;
                 }
                 .user-container:hover{
-                    transition: background-color 0.5s ease-in, transform 0.8s ease-in-out;
+                    transition: background-color 0.5s ease-in-out;
                     background-color: var(--border-color);
-                    transform: scale(1.15);
                     z-index: 9;
                     /* transform:rotate(360deg); */
                 }

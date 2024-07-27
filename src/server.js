@@ -37,11 +37,23 @@ app.get('/:namePic', (req,res) => {
   }
 })
 
+// Daftar
+// Masuk
+// Keluar
+// ListChannel
+// Channel 
+// Send dan receive
+// Send Date
+
+
 app.get('/', (req,res) => {
   const index = path.join(__dirname, 'public', 'index.html')
   res.sendFile(index)
 })
 
+app.use((req, res, next) => {
+  res.json("Page not found")
+})
 
 IO.on('connection', (socket) => {
   console.log(' client is connect')
